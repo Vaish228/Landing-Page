@@ -1,0 +1,480 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fruit Shop Landing Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <style>
+		:root {
+  font-size: 7px;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior:initial;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+#header {
+  height: 7rem;
+  font-family:'Times New Roman', Times, serif;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.945);
+  padding: 1rem 0;
+  position: sticky;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  box-shadow: 0 6px 31px -2px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 800px) {
+  #header {
+    text-align: center;
+    height: auto;
+	margin-left:auto;
+  }
+}
+.header-content-div {
+  max-width: 95rem;
+  width: auto;
+  margin: auto;
+}
+@media (max-width: 991px) {
+  .header-content-div {
+    max-width: 75rem;
+  }
+}
+#header-img {
+	margin-top: -5px;
+  height: 8.5rem;
+  width: 26rem;
+  margin-left: -110px;
+}
+@media (max-width: 800px) {
+  #header-img {
+    height: 4rem;
+  }
+}
+nav {
+  position: relative;
+  top: 0.7rem;
+  left: 90px;
+  float: right;
+  font-size: 1.7rem;
+  font-weight: 600;
+
+  padding: 2rem 0;
+}
+@media (max-width: 800px) {
+  nav {
+    position: static;
+    float: none;
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem;
+  }
+}
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  margin: 0 0.5rem;
+  padding: 0 0.6rem;
+  transition: border-bottom 0.2s;
+}
+@media (max-width: 475px) {
+  .nav-link {
+    margin: 0 0.2rem;
+    padding: 0 0.2rem;
+    font-size: 1.2rem;
+  }
+}
+.nav-link:hover {
+  color: #e23d3d;
+  border-bottom: 2px solid #e23d3d;
+}
+.nav-link:active {
+  color: #f84848;
+}
+.flexible {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.home-sec {
+  font-family: "Montserrat", sans-serif;
+  background-color: #e3e3e3;
+  text-align: start;
+  min-height: 50rem;
+  height: auto;
+  margin: 0 auto 5rem auto;
+  justify-content: start;
+  max-width: 95rem;
+  color: #333;
+}
+@media (max-width: 800px) {
+  .home-sec {
+    flex-flow: column wrap;
+    max-width: 100%;
+  }
+}
+.eye-grabber {
+  flex: 1.2;
+  padding: 0 7rem;
+}
+@media (max-width: 800px) {
+  .eye-grabber {
+    max-width: max-content;
+    padding-bottom: 8rem;
+  }
+}
+.eye-grabber h1 {
+  font-size: 4rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.eye-grabber h2 {
+  font-size: 2.0rem;
+  font-weight: 500;
+  color: #666;
+}
+.eye-grabber-img {
+  flex: 1.5;
+}
+@media (max-width: 800px) {
+  .eye-grabber-img {
+    width: 100%;
+  }
+}
+.eye-grabber-img img {
+  max-width: 100%;
+}
+.btn {
+  border: none;
+  font-size: 1.75rem;
+  border-radius: 0.4rem;
+  padding: 1.85rem;
+  background-color: #e23d3d;
+  color: #fafafa;
+  outline: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: #383838;
+  cursor: pointer;
+}
+.btn:active {
+  transform: scale(0.9);
+}
+.section-heading {
+  font-size: 2.5rem;
+  font-family:"Montserrat", sans-serif;
+  font-weight: 600;
+  line-height: 1;
+  margin: 0;
+  padding: 5rem 0 5rem 0;
+  text-align: center;
+}
+.sec-content-div {
+  font-size: 2.0rem;
+  text-align: start;
+  padding: 0 2rem 5rem 2rem;
+  width: auto;
+  justify-content: space-around;
+  max-width: 95rem;
+  margin: auto;
+  word-spacing: 0.2rem;
+  line-height: 19px;
+  font-family: "Montserrat", sans-serif;
+}
+.sec-padding {
+  padding: 8rem 0 10rem 0;
+}
+
+#about {
+  background-color: #161616e4;
+  color:#ffffff;
+  margin-top:-10px;
+}
+#about img {
+  
+  height: 300px;
+  width: 500px;
+
+  border-radius: 1.2rem;
+  
+}
+.tite{
+  background-color: #fafafaba;
+  height: 25rem;
+  width: 25rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  padding: 1.5rem;
+  margin: 1.5rem;
+}
+.tite img{
+	
+  max-width: 25rem;
+  max-height: 25rem;
+  border-radius: 0.5rem;
+}
+#varieties {
+  background-color: #e3e3e3;
+}
+.tile {
+  background-color: #fafafa;
+  height: 40rem;
+  width: 25rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  padding: 1.5rem;
+  margin: 1.5rem;
+}
+@media (max-width: 680px) {
+  .tile {
+    width: auto;
+    max-width: 100%;
+    min-width: 20rem;
+    margin: 1.5rem auto;
+    height: auto;
+  }
+}
+.tile img {
+  width: 100%;
+  max-width: 48rem;
+  border-radius: 0.5rem;
+}
+.tile h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 0;
+  color: #e23d3d;
+  margin: 0;
+}
+.tile p {
+  font-size: 1.6rem;
+  padding: 0;
+  margin: 0;
+}
+.tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.19), 0 16px 16px rgba(0, 0, 0, 0.23);
+}
+
+
+#contact {
+  background-color: #161616e4;
+  color: #fafafa;
+}
+#contact h6 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+input[type="email"] {
+  border: none;
+  outline: 0;
+  font-size: 2rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 1.5rem;
+}
+@media (max-width: 520px) {
+  #contact h6 {
+    font-size: 1.8rem;
+  }
+  #contact input[type="submit"],
+  #contact input[type="email"] {
+    margin: 1rem 1rem 0 1rem;
+  }
+}
+
+	</style>
+  </head>
+  <body>
+    <header id="header">
+      <div class="header-content-div">
+        <a href="#home-sec">
+<img
+            src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/4a5ba597664047.5ecab2dd7c244.jpg"
+            alt="Company Logo"
+            id="header-img"/></a>
+        <nav id="nav-bar">
+			<a href="#home-sec" class="nav-link">HOME </a>
+         
+          <a href="#varieties" class="nav-link">VARIETIES</a>
+		  <a href="#about" class="nav-link">ABOUT</a>
+          <a href="#contact" class="nav-link">CONTACT</a>
+          
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="home-sec" class="flexible home-sec">
+        <div class="eye-grabber-img">
+          <img
+            src="https://png.pngtree.com/png-vector/20240202/ourlarge/pngtree-busket-of-fruits-png-free-download-png-image_11531618.png"
+            alt="Image of Apples"
+          />
+        </div>
+        <div class="eye-grabber">
+          <h1>Fresh, Crispy, Heavenly.</h1>
+          <h2>
+            100% Organic, vivid varieties of fruits grown in the World aka The
+            Heaven of Earth.
+          </h2>
+          <button class="btn" onclick="window.location.href = '#contact';">
+            Buy Now
+          </button>
+        </div>
+      </section>
+      <section id="about" class="sec-padding">
+        <h3 class="section-heading">ABOUT US</h3>
+        <div class="sec-content-div flexible">
+          <p>
+			As a seasoned collective with decades of experience in the cultivation and distribution of fruits, we possess a profound understanding of what constitutes exceptional fruit and the intricate process involved in their cultivation. Flourishing in a variety of climates, our fruits thrive in diverse environments, from lush orchards to sun-kissed fields. Blessed with optimal soil conditions and a temperate climate, our fruits from Kashmir embody unparalleled quality and flavor. The union of fertile soil, conducive climate, and meticulous care in cultivation yields fruits with distinctive characteristics, ranging from exquisite taste and vibrant color to remarkable size and aroma, making them stand out in the global market.</p>
+			<div class="tite">
+				<img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaGGuAru1rcUno1lDrGWO0UN0jJ_mabSpeY_dWCi0_IY7MgRanx32j65EfZ8ubq3Bcv2c&usqp=CAU"
+              alt="photo of amber apples"
+            />
+			  </div>
+			  <div class="tite">
+				<img
+              src="https://png.pngtree.com/png-vector/20240125/ourlarge/pngtree-ripe-rambutan-png-file-png-image_11490857.png"
+              alt="photo of amber apples"
+            />
+			  </div>
+			  <div class="tite">
+				<img
+              src="https://img.freepik.com/free-photo/fresh-kiwi-fruit-isolated_144627-30034.jpg?size=626&ext=jpg&ga=GA1.1.553209589.1715040000&semt=ais"
+              alt="photo of amber apples"
+            />
+			
+			  </div>
+        </div>
+      </section>
+      <section id="varieties" class="sec-padding">
+        <h3 class="section-heading">VARIETIES</h3>
+        <div class="sec-content-div flexible">
+          <div class="tile">
+            <img
+              src="https://png.pngtree.com/png-vector/20230726/ourmid/pngtree-with-whole-and-cut-pomegranate-on-white-background-png-image_6750524.png"
+              alt="photo of amber apples"
+            />
+            <h4>Ruby Pomegranate</h4>
+            <p>
+				A pomegranate is a sweet, tart fruit with thick, red skin. While the skin is not edible, it holds hundreds of juicy seeds that you can eat plain. </p>
+          </div>
+          <div class="tile">
+            <img
+              src="https://i0.wp.com/cdn.mylittlemoppet.com/wp-content/uploads/2022/08/08222019/s3-13.jpg?ssl=1"
+              alt="photo of american trel apples"
+            />
+            <h4>Exotic Jackfruit</h4>
+            <p>
+				The jackfruit is the fruit of jack tree Artocarpus heterophyllus, a species of tree in the fig, mulberry, and breadfruit family (Moraceae).
+            </p>
+          </div>
+          <div class="tile">
+            <img
+              src="https://c1.peakpx.com/wallpaper/932/809/116/bananas-fruits-fruit-healthy-yellow-wallpaper-thumb.jpg"
+              alt="photo of red delicious apple"
+            />
+            <h4>Banana Bliss</h4>
+            <p>
+				A banana is an elongated, edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa.</p>
+          </div>
+          <div class="tile">
+            <img
+              src="https://m.media-amazon.com/images/I/418cpN8RxFL._AC_UF350,350_QL80_.jpg"
+              alt="photo of Maharaej apples"
+            />
+            <h4>Velvet Sapota</h4>
+            <p>Sapota is commonly known as the sapodilla, is a long-lived, evergreen tree native to southern Mexico, Central America and the Caribbean.
+              </p>
+          </div>
+          <div class="tile">
+            <img
+              src="https://cdn.create.vista.com/api/media/small/63664705/stock-photo-grapes-branch-isolated-on-white-background"
+              alt="photo of Hazratbael apples"
+            />
+            <h4>Grape Glory</h4>
+            <p>
+				Grapes are bulb-shaped fruits. They can be eaten fresh, dried to make raisins, or crushed to make grape juice or wine.
+            </p>
+          </div>
+          <div class="tile">
+            <img
+              src="https://t3.ftcdn.net/jpg/02/01/79/54/360_F_201795443_a16jojvPRiobPC96uO7ePHSNzGVoBLbc.jpg"
+              alt="photo of Golden Delicious apples"
+            />
+            <h4>Sun-Kissed Orange</h4>
+            <p>
+				Orange is a sour fruit that is round in shape and is orange colored. Orange is a vitamin C rich food as it is one of the primary sources of vitamin C.
+            </p>
+          </div>
+		  <div class="tile">
+            <img
+              src="https://i.ibb.co/jTDgqYB/red-delicious.png"
+              alt="photo of Maharaej apples"
+            />
+            <h4>Maharaj Apple</h4>
+            <p>
+              A large apple with red and green color. It tastes a bit sour but
+              sweetens with time and is available by late October.
+            </p>
+          </div>
+		  <div class="tile">
+            <img
+              src="https://www.finedininglovers.com/sites/g/files/xknfdk626/files/2021-06/best-mango-varieties-serving%C2%A9iStock.jpg"
+              alt="photo of Maharaej apples"
+            />
+            <h4>Golden Mango</h4>
+            <p>
+				Mango is the national fruit of India which is loved by one and all. It is a very juicy, pulpy and luscious fruit. Mango is a rich source of various vitamins and minerals.  </p>
+          </div>
+		  <div class="tile">
+            <img
+              src="https://t3.ftcdn.net/jpg/03/08/44/22/360_F_308442270_cH4cpqdjrZsMwMtJX3P9T813ZynNKF4n.jpg"
+              alt="photo of Maharaej apples"
+            />
+            <h4>Royal Guava</h4>
+            <p>
+				Guavas are tropical trees originating in Central America. Their fruits are oval in shape with light green or yellow skin and contain edible seeds.</p>
+          </div>
+        </div>
+      </section>
+      
+      
+      <section class="sec-padding" id="contact">
+        <h3 class="section-heading">CONTACT</h3>
+        <div class="sec-content-div flexible">
+          <h6>To make an order or just to know more contact us :</h6>
+          <form
+            id="form"
+            action="https://www.freecodecamp.com/email-submit"
+            method="POST"
+          >
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your Email Address"
+              required
+            />
+            <input type="submit" class="btn" id="submit" value="Know More" />
+          </form>
+        </div>
+      </section>
+    </main>
+   
+  </body>
+</html>
